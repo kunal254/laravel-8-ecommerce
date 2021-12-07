@@ -1,0 +1,28 @@
+.product{
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.product img{
+    width: 35%;
+    min-width: 230px;
+}
+.details{
+    width: 60%;
+    align-self: flex-start;
+    font-family: 'Roboto', sans-serif;
+}
+.cta{
+    margin-left: 0;
+}
+@media (max-width: 645px){
+    .product{
+        flex-direction: column;
+    }
+    .product img{
+        width: 100%;
+    }
+    .details{
+        width: 100%;
+    }
+
+}

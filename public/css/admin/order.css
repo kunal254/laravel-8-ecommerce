@@ -1,0 +1,47 @@
+.sm_card{
+    border-radius: 20px;
+    background-color: #37444c;
+    padding: .7em;
+    margin: 0 10px;
+}
+.status{
+    font-size: .7em;
+}
+.order_details{
+    display: flex;
+    align-items: flex-start;
+    padding: 7px 0;
+}
+.order_details span:last-child{
+    color: var(--text-grey);
+}
+.order_details span:first-child{
+    width: 200px;
+}
+
+td:not(first-child){
+    text-align: center;
+}
+.back_link{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    color: white !important;
+    text-decoration: none;
+}
+.back_link span{
+    margin-right: 5px;
+}
+.text_grey{
+    color: var(--text-grey);
+}
+.text_icon{
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+@media (max-width: 500px){
+    .order_details{
+        flex-direction: column;
+    }
+}

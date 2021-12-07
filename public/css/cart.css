@@ -1,0 +1,70 @@
+table{
+    margin-top: 1rem;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+thead{
+    color: white;
+    background-color: var(--head_col);
+}
+td{
+    padding: .5rem 5px;
+}
+td:last-child{
+    text-align: end;
+}
+table input{
+    width: 3em;
+}
+
+.product{
+    font-size: .9rem;
+}
+.product img{
+    width: 100px;
+    margin-right: 5px;
+    margin-bottom: 7px;
+}
+.details{
+    align-self: flex-start;
+}
+.details a:first-child{
+    color: var(--site_col_1);
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+.details p{
+    margin: 10px 0;
+}
+.remove{
+    color: #ff0000c4;
+}
+.subtotal-table{
+    width: 35vw;
+    max-width: 375px;
+    min-width: 205px;
+    border-top: 3px solid var(--head_col);
+}
+.checkout{
+    margin-top: 1rem;
+}
+.checkout a{
+    color: white;
+    background-color: var(--head_col);
+    border-radius: 2rem;
+    padding: 8px 20px;
+}
+@media (max-width: 500px){
+    .product{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .details p{
+        margin: 2px 0;
+    }
+    .subtotal-table{
+        max-width: 1000px;
+        width: 100%;
+    }
+}

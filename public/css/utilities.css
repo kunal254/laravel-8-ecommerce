@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+    --head_col: #333333;
+    --site_col_1: #3da8f3;
+    --site_text_1: #b3b3b3;
+}
+
+/* ============start
+      UTILITIES
+   ============ */
+.m-0 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.d-b {
+    display: block;
+}
+
+.flex_align {
+    display: flex;
+    align-items: center;
+}
+
+._container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.space-lr {
+    padding: 0 15px;
+}
+
+/* ============end
+    UTILITIES
+============ */
+/* ============start
+    COMPONENTS
+============ */
+.product_card {
+    box-shadow: 0 0 5px var(--head_col);
+    max-width: 250px;
+    font-family: monospace;
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: black;
+    border-radius: 5px;
+}
+.product_card div{
+    display: grid;
+    place-items: center;
+    height: 190px;
+    overflow: hidden;
+    border-bottom: 3px solid var(--head_col);
+}
+.product_card img {
+    width: 100%;
+}
+
+.product_card h3 {
+    margin: 5px 0;
+}
+
+.product_card p {
+    margin: 5px;
+}
+
+/* call to action buttons */
+.cta {
+    display: block;
+    margin: 1.5rem auto;
+    width: fit-content;
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 1.2em;
+    border: 1px solid black;
+    padding: .7em 1.2em;
+}
+
+.cta:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+/* notification box */
+.notification-link {
+    display: block;
+    position: relative;
+}
+
+.notification-link .badge {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+    color: black;
+    padding: 1px 6px;
+    font-weight: bold;
+}
+
+/* one-form */
+.one-form {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+}
+
+.one-form input {
+    align-self: stretch;
+    padding: .5em 1em;
+    outline: none;
+    border: none;
+    width: 25rem;
+}
+
+.one-form button {
+    align-self: stretch;
+    border: none;
+    background-color: white;
+    color: var(--site_col_1);
+}
+
+/* logo links(inside img) */
+.logo-link {
+    width: 8rem;
+}
+
+.logo-link img {
+    width: 100%;
+}
+
+/* ============end
+    COMPONENTS
+============ */
+/* ============start
+      MODALS 
+   ============ */
+.modal-container {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.651);
+    font-family: 'Roboto', sans-serif;
+}
+
+.modal {
+    position: relative;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.modal span {
+    position: absolute;
+    top: -1.5em;
+    right: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+}
+
+.modal .action {
+    padding-top: 1rem;
+    justify-content: space-between;
+}
+
+.modal button {
+    width: 45%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.modal-cancel {
+    border: 1px solid grey;
+    background-color: white;
+}
+
+.modal-ok {
+    background-color: #2874f0;
+    color: white;
+    border: none;
+}
+
+/* ============end
+    MODALS 
+============ */
+/* ============start
+COMPONENTS-HEADER
+============ */
+header {
+    position: relative;
+    height: 4rem;
+    background-color: var(--head_col);
+}
+
+header nav {
+    height: 100%;
+}
+
+/* ============end
+COMPONENTS-HEADER
+============ */
+/* ============start
+COMPONENTS-FOOTER
+============ */
+
+footer {
+    margin-top: 3rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--head_col);
+    color: white;
+}
+
+.footer-links {
+    justify-content: space-between;
+    padding: 3rem 2rem;
+}
+
+.footer-links ul {
+    padding: 0;
+}
+
+footer .site-info {
+    border-top: 2px solid var(--site_text_1);
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+/* ============end
+COMPONENTS-FOOTER
+============ */
+
+
+
+/*
+|--------------------------------------------------------------------------
+|  MOBILE DEVICES
+|--------------------------------------------------------------------------
+|   * FOOTER
+|   * HEADER
+|   * ONE-FORM
+|
+*/
+/* header and one-form */
+@media (max-width: 720px) {
+    header {
+        padding-bottom: 3rem;
+    }
+
+    header ul {
+        margin-left: auto;
+    }
+
+    header form {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+    }
+
+    .one-form input {
+        width: 100%;
+    }
+}
+
+/* footer */
+@media (max-width: 800px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .site-info p {
+        text-align: center;
+    }
+}

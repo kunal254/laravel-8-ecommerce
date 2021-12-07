@@ -1,0 +1,88 @@
+.headings {
+    margin-top: 2rem;
+    justify-content: space-between;
+    color: var(--text-grey);
+}
+.headings h3{
+    margin: 0;
+    color: white;
+}
+.headings p:last-child{
+    margin: .3em 0;
+}
+.headings button{
+    border: none;
+    background-color: var(--text-blue);
+    font-size: 1rem;
+    color: white;
+    padding: .5rem 1.5rem;
+}
+.headings button span{
+    margin-right: .5em;
+}
+
+
+.data_grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+.data_grid .card{
+    grid-column: span 3;
+    height: 200px;
+    background-color: var(--primary_col);
+}
+.data_grid .bar_graph{
+    grid-column: span 4;
+    height: auto;
+}
+.bar_graph .headings{
+    padding: 1rem;
+    margin-top: .5rem;
+}
+.data_grid .notify{
+    grid-column: span 2;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.notify h1{
+    color: var(--text-blue);
+    margin: 0;
+}
+.notify p{
+    color: var(--text-grey);
+}
+
+/* ChartJs */
+.chart{
+    height: 50%;
+    width: 40%;
+}
+.productChart{
+    padding: 1rem;
+    width: 85%;
+    height: 100%;
+}
+
+@media (max-width: 960px) {
+    .headings {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .headings button{
+        margin-top: 1rem;
+    }
+
+    .data_grid{
+        grid-template-columns: 1fr;
+    }
+    .data_grid .card{
+        grid-column: 1;
+    }
+}

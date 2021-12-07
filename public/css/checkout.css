@@ -1,0 +1,76 @@
+main{
+    font-family: 'Roboto', sans-serif;
+}
+h2{
+    font-weight: 400;
+}
+.form_group{
+    margin: .5rem 0;
+}
+.form_group label{
+    display: block;
+    font-size: 18px;
+    color: var(--head_col);
+}
+.form_group input{
+    width: 100%;
+    box-sizing: border-box;
+    margin: .5em 0;
+    font-size: 16px;
+    padding: 8px;
+}
+.two_form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.two_form .form_group{
+    width: 45%;
+}
+.checkout_order{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.checkout{
+    width: 50%;
+}
+.order{
+    display: grid;
+    place-items: center;
+    width: 45%;
+}
+.checkout button{
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+    border: none;
+    padding: 0.5em;
+    font-size: 1.2em;
+    background: var(--head_col);
+    color: white;
+    cursor: pointer;
+}
+.order .card{
+    min-width: 300px;
+    margin: 1.5rem;
+    border: 2px solid var(--head_col);
+    padding: 10px;
+    text-align: center;
+}
+.order .flex_align{
+    justify-content: space-between;
+    margin: 5px 0;
+}
+@media (max-width: 850px){
+    .checkout_order{
+        flex-direction: column;
+        align-items: center;
+    }
+    .checkout{
+        width: 100%;
+    }
+    .order{
+        width: 100%;
+    }
+}

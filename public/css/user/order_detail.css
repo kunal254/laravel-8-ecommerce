@@ -1,0 +1,42 @@
+/* images */
+.img_container{
+    background: white;
+    width: 75px;
+    height:100px;
+    overflow-y: hidden;
+    display: grid;
+    place-items: center;
+}
+.img_container img{
+    width: 100%; 
+    object-fit:cover;
+}
+
+.grid .flex_align{
+    justify-content: space-between;
+}
+.grid span{
+    font-size: .9em;
+}
+.flex_align strong {
+}
+h4{
+    margin: 0 .5em;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.grid>div>div{
+    background: aliceblue;
+    padding: 0.5em;
+}
+
+@media (max-width: 500px)
+{
+    .grid>div{
+        grid-column: span 2;
+    }
+}

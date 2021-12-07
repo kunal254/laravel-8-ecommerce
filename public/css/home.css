@@ -1,0 +1,68 @@
+.hero {
+  display: grid;
+  place-items: center;
+  height: 70vh;
+  text-align: center;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: monospace;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero a {
+  width: 100px;
+  font-size: 1.5em;
+  background-color: #770014;
+  color: #ffffff;
+  font-weight: bolder;
+  padding: .5em 1em;
+  margin: 0 auto;
+}
+
+.home-grid {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.category {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  height: 250px;
+  border-radius: .5rem;
+  transition: transform 100ms ease-out;
+}
+.category .screen{
+  position: absolute;
+  inset: 0;
+  background-color : rgba(0, 0, 0, 0.384);
+}
+.category h3{
+  position: absolute;
+  margin: 10px;
+  color: white;
+  font-family: monospace;
+  font-size: 1.5em;
+  bottom: 0;
+}
+
+.category:hover {
+  transform: translateY(-10px);
+}
+
+
+@media (max-width: 720px) {
+  .home-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

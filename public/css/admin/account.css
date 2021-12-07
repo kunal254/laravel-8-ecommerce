@@ -1,0 +1,59 @@
+/* general start */
+.general{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 1.5rem;
+}
+.profile{
+    grid-column: span 2;
+    display: grid;
+    align-self: flex-start;
+    place-items: center;
+    text-align: center;
+}
+.profile img{
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+}
+.details{
+    grid-column: span 6;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+.details input{
+    margin: 0;
+}
+textarea{
+    grid-column: span 2;
+    background-color: transparent;
+    color: white;
+    padding: .5rem;
+    border-radius: 16px;
+}
+/* general end */
+/* security start */
+.security{
+    margin-top: 1rem;
+    width: 50%;
+}
+.security input[type="submit"]{
+    margin: 1rem;
+}
+/* security end */
+
+@media (max-width: 960px){
+    .general .card{
+        grid-column: span 8;
+    }
+    .details input{
+        grid-column: span 2;
+    }
+
+    .security{
+        width: 100%;
+    }
+}
