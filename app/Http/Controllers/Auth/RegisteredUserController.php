@@ -56,8 +56,7 @@ class RegisteredUserController extends Controller
         
         /** @var \App\Models\User $user **/
         $user = Auth::user();
-        $userCart = $user->carts()->create();
-
+        $userCart = $user->carts()->firstOrCreate(['status' => 'N']);
         foreach ($cart as $id => $quantity) 
         {
             $userCart->products()->attach($id, ['quantity' => $quantity, 'discount' => 0]);
