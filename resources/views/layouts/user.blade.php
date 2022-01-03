@@ -43,7 +43,7 @@
             @endif
 
             <!-- form -->
-            <form class="cloak hide" action="" method="post">
+            <form class="cloak hide" action="{{ route('user.profile') }}" method="post">
                 @csrf
                 Name <br>
                 <input class="input_text" type="text" name="" id=""><br>
