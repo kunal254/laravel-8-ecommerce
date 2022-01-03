@@ -88,6 +88,7 @@ Route::middleware('auth')->group(function(){
     Route::name('user.')->prefix('user')->group(function(){
 
         Route::view('/profile', 'user.profile')->name('profile');
+        Route::post('/profile', function(){ return "This feature is under maintance mode"; });
         Route::resource('orders', OrderController::class)->only(['index', 'show', 'update']);
         Route::view('/ship_info', 'user.ship_info')->name('ship_info');
         Route::view('/setting', 'user.setting')->name('setting');
