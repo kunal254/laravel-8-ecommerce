@@ -14,7 +14,8 @@ class OrderController extends Controller
     private $status_array = [
         "N" => ['PENDING', 'blue'],
         "C" => ['CANCELED', 'red'],
-        'P' => ['PAID', 'limegreen']
+        "P" => ['PAID', 'limegreen'],
+	    "D" => ['DELIVERED', 'limegreen']
     ];
     
     private $transaction_mode = [
