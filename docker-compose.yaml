@@ -1,0 +1,17 @@
+services:
+  app:
+    depends_on:
+      - mysql
+    build: ./
+    ports:
+      - "8001:8001"
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: beyond
+      MYSQL_USER: tesla
+      MYSQL_PASSWORD: tesla
